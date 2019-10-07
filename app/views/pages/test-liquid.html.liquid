@@ -1,0 +1,19 @@
+---
+slug: test-liquid
+layout_name: 1col
+searchable: true
+metadata: {
+    page_title: "Test Liquid",
+    meta_title: "",
+    description: "",
+    canonical_url: "",
+    status: "published",
+    search_engine_visibility: "true",
+    page_type: "content",
+}
+--- 
+
+{%- graphql g = "modules/ins_database/policies_and_procedures" -%}
+{% for g in g.items -%}
+{{g.['Policy/Procedure Name']}}
+{% endfor -%}
